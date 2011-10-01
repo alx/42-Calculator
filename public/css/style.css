@@ -201,14 +201,17 @@ input:invalid, textarea:invalid { background-color: #f0dddd; }
 table { border-collapse: collapse; border-spacing: 0; }
 td { vertical-align: top; }
 
-
 /* ==|== primary styles =====================================================
    Author:
    ========================================================================== */
 
-#resizable { width: 150px; height: 150px; padding: 0.5em; }
-#resizable h3 { text-align: center; margin: 0; }
-
+#resizable {
+  background-image:url(/img/42_large.png);
+  background-repeat:repeat;
+  width: 168px;
+  height: 336px;
+  padding: 0;
+}
 
 
 

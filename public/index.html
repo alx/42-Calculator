@@ -38,24 +38,37 @@
 </head>
 
 <body>
-  <header>
-  <h1>42 Calculator</h1>
-  </header>
   <div role="main" class="container">
+
+    <h1>42 Calculator - <span id="nbLeds"></span> Leds </h1>
+
     <div id="ledwall" class="span-18">
       <div id="resizable" class="ui-widget-content">
-        <h3 class="ui-widget-header">Led Wall</h3>
       </div>
     </div>
     <div class="span-6 last">
       <p>
-        <label for="wall_width">Width:</label><br>
-        <input type="text" name="wall_width" value="1">
+        <a href="#" class="changeWallAspect" data-aspect="large">Large</a><br>
+        <a href="#" class="changeWallAspect" data-aspect="medium">Medium</a><br>
+        <a href="#" class="changeWallAspect" data-aspect="small">Small</a>
       </p>
-      <p>
-        <label for="wall_height">Height:</label><br>
-        <input type="text" name="wall_height" value="1">
-      </p>
+      <ul>
+        <li>
+          <a href="http://shop.snootlab.com/lang-en/arduino/12-arduino-uno.html">
+            <span id="stockArduino"></span> Arduino Uno
+          </a> : <span id="priceArduino"></span>&euro;
+        </li>
+        <li>
+          <a href="http://shop.snootlab.com/lang-en/powerduino/32-i2c-pwm-driver.html">
+            <span id="stockMax7313"></span> I2C Pwm Driver
+          </a> : <span id="priceMax7313"></span>&euro;
+        </li>
+        <li>
+          <a href="http://shop.snootlab.com/lang-en/powerduino/60-thefortytwo.html">
+            <span id="stock42"></span> TheFortyTwo
+          </a> : <span id="price42"></span>&euro;
+        </li>
+        <li><strong>Total : <span id="priceTotal"></span>&euro;</strong></li>
     </div>
   </div>
   <footer>
