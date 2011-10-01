@@ -21,6 +21,12 @@
 
   <!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
 
+  <!-- Framework CSS -->
+  <link rel="stylesheet" href="css/blueprint/screen.css" type="text/css" media="screen, projection">
+  <link rel="stylesheet" href="css/blueprint/print.css" type="text/css" media="print">
+  <!--[if lt IE 8]><link rel="stylesheet" href="css/blueprint/ie.css" type="text/css" media="screen, projection"><![endif]-->
+  
+  <link rel="stylesheet" href="css/Aristo/Aristo.css">
   <link rel="stylesheet" href="css/style.css">
   
   <!-- More ideas for your <head> here: h5bp.com/d/head-Tips -->
@@ -33,11 +39,24 @@
 
 <body>
   <header>
-  42 Calculator
+  <h1>42 Calculator</h1>
   </header>
-  <div role="main">
-  <input type="text" name="wall_width" value="1">
-  <input type="text" name="wall_height" value="1">
+  <div role="main" class="container">
+    <div id="ledwall" class="span-18">
+      <div id="resizable" class="ui-widget-content">
+        <h3 class="ui-widget-header">Led Wall</h3>
+      </div>
+    </div>
+    <div class="span-6 last">
+      <p>
+        <label for="wall_width">Width:</label><br>
+        <input type="text" name="wall_width" value="1">
+      </p>
+      <p>
+        <label for="wall_height">Height:</label><br>
+        <input type="text" name="wall_height" value="1">
+      </p>
+    </div>
   </div>
   <footer>
 
@@ -51,8 +70,9 @@
   <script>window.jQuery || document.write('<script src="js/libs/jquery-1.6.4.min.js"><\/script>')</script>
 
 
+  <script defer src="js/libs/jquery-ui-1.8.16.custom.min.js"></script>
   <script defer src="js/libs/underscore-min.js"></script>
-  <script defer src="js/libs/backbone-min.js"></script>
+  <script defer src="js/libs/backbone.js"></script>
 
   <!-- scripts concatenated and minified via build script -->
   <script defer src="js/plugins.js"></script>

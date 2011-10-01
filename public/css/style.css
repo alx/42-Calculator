@@ -206,6 +206,8 @@ td { vertical-align: top; }
    Author:
    ========================================================================== */
 
+#resizable { width: 150px; height: 150px; padding: 0.5em; }
+#resizable h3 { text-align: center; margin: 0; }
 
 
 
