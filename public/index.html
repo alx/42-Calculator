@@ -25,6 +25,8 @@
   <link rel="stylesheet" href="css/blueprint/screen.css" type="text/css" media="screen, projection">
   <link rel="stylesheet" href="css/blueprint/print.css" type="text/css" media="print">
   <!--[if lt IE 8]><link rel="stylesheet" href="css/blueprint/ie.css" type="text/css" media="screen, projection"><![endif]-->
+
+  <link href='http://fonts.googleapis.com/css?family=Sansita+One|Lobster+Two' rel='stylesheet' type='text/css'>
   
   <link rel="stylesheet" href="css/Aristo/Aristo.css">
   <link rel="stylesheet" href="css/style.css">
@@ -40,35 +42,61 @@
 <body>
   <div role="main" class="container">
 
-    <h1>42 Calculator - <span id="nbLeds"></span> Leds </h1>
+    <h1>42 Calculator</h1>
 
-    <div id="ledwall" class="span-18">
+    <div id="ledwall" class="span-20">
       <div id="resizable" class="ui-widget-content">
       </div>
+      <div class="container">
+        <div id="sizeLabel" class="span-2"><h2>Size</h2></div>
+        <div class="span-5">
+          <a href="#" class="changeWallAspect" data-aspect="large"><img src="img/icon_large.png"></a>
+        </div>
+        <div class="span-5">
+          <a href="#" class="changeWallAspect" data-aspect="medium"><img src="img/icon_medium.png"></a>
+        </div>
+        <div class="span-5 last">
+          <a href="#" class="changeWallAspect" data-aspect="small"><img src="img/icon_small.png"></a>
+        </div>
+      </div>
     </div>
-    <div class="span-6 last">
-      <p>
-        <a href="#" class="changeWallAspect" data-aspect="large">Large</a><br>
-        <a href="#" class="changeWallAspect" data-aspect="medium">Medium</a><br>
-        <a href="#" class="changeWallAspect" data-aspect="small">Small</a>
-      </p>
-      <ul>
+    <div class="span-4 last">
+      <h2>info</h2>
+      <ul id="info">
+        <li><strong>Number of Leds</strong><br><span id="nbLeds" class="italic"></span></li>
+        <li><strong>Fun Factor</strong><br><span id="funFactor" class="italic"></span></li>
+      </ul>
+
+      <h2>cart</h2>
+      <ul id="cart">
         <li>
-          <a href="http://shop.snootlab.com/lang-en/arduino/12-arduino-uno.html">
-            <span id="stockArduino"></span> Arduino Uno
-          </a> : <span id="priceArduino"></span>&euro;
+          <a href="http://shop.snootlab.com/lang-en/arduino/12-arduino-uno.html">Arduino Uno</a>
+          <span id="stockArduino" class="strong"></span>
+          <br>
+          <span id="priceArduino" class="italic"></span>&euro;
         </li>
         <li>
-          <a href="http://shop.snootlab.com/lang-en/powerduino/32-i2c-pwm-driver.html">
-            <span id="stockMax7313"></span> I2C Pwm Driver
-          </a> : <span id="priceMax7313"></span>&euro;
+          <a href="http://shop.snootlab.com/lang-en/powerduino/32-i2c-pwm-driver.html">I2C Pwm Driver</a>
+          <span id="stockMax7313" class="strong"></span>
+          <br>
+          <span id="priceMax7313" class="italic"></span>&euro;
         </li>
         <li>
-          <a href="http://shop.snootlab.com/lang-en/powerduino/60-thefortytwo.html">
-            <span id="stock42"></span> TheFortyTwo
-          </a> : <span id="price42"></span>&euro;
+          <a href="http://shop.snootlab.com/lang-en/powerduino/60-thefortytwo.html">TheFortyTwo</a>
+          <span id="stock42" class="strong"></span>
+          <br>
+          <span id="price42" class="italic"></span>&euro;
         </li>
-        <li><strong>Total : <span id="priceTotal"></span>&euro;</strong></li>
+        <li>
+          <a href="http://shop.snootlab.com/lang-en/wires/56-kit-bus-i2c.html">Kit wires for I2C bus</a>
+          <span id="stockCable" class="strong"></span>
+          <br>
+          <span id="priceCable" class="italic"></span>&euro;
+        </li>
+        <li class="strong">Total : <span id="priceTotal" class="italic"></span>&euro;</li>
+      </ul>
+
+      <a id="order" href="#">Order it by mail!</a>	
     </div>
   </div>
   <footer>
@@ -85,7 +113,7 @@
 
   <script defer src="js/libs/jquery-ui-1.8.16.custom.min.js"></script>
   <script defer src="js/libs/underscore-min.js"></script>
-  <script defer src="js/libs/backbone.js"></script>
+  <script defer src="js/libs/backbone-min.js"></script>
 
   <!-- scripts concatenated and minified via build script -->
   <script defer src="js/plugins.js"></script>

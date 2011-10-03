@@ -205,25 +205,60 @@ td { vertical-align: top; }
    Author:
    ========================================================================== */
 
+body {
+}
+
+h1 {
+  font-family: 'Sansita One', cursive;
+  font-size: 60px;
+  text-align:center;
+  padding: 10px;
+}
+
+h2 {
+  font-family: 'Lobster Two', cursive;
+}
+
 #resizable {
-  background-image:url(/img/42_large.png);
+  background-image:url(../img/42_large.png);
   background-repeat:repeat;
   width: 168px;
   height: 336px;
   padding: 0;
+  margin-bottom:40px;
 }
 
+#ledwall{
+  background-image: url(../img/drag_here.png);
+}
 
+#sizeLabel{
+  margin-top:90px;
+}
 
+ul{
+  margin:0;
+  padding:0;
+  text-align:right;
+  font-size:14px;
+  list-style:none;
+}
 
+li{
+  margin-top:20px;
+}
 
+.strong{
+  font-weight:bold;
+}
 
+.italic{
+  font-style:italic;
+}
 
-
-
-
-
-
+#order{
+  margin-top:40px;
+}
 
 
 /* ==|== media queries ======================================================
